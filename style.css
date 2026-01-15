@@ -1,0 +1,113 @@
+/* 自定义样式 */
+
+/* 移动端抽屉式弹窗 */
+@media (max-width: 768px) {
+    #noteModal {
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    #noteModal > div {
+        max-width: 100%;
+        border-radius: 16px 16px 0 0;
+        height: 80vh;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #noteModal > div > div:last-child {
+        margin-top: auto;
+    }
+    
+    #noteContent {
+        min-height: 200px;
+    }
+}
+
+/* 随笔卡片动画 */
+.note-card {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 模态框淡入动画 */
+#noteModal.fade-in {
+    animation: modalFadeIn 0.3s ease-in-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 模态框内容动画 */
+#noteModal.fade-in > div {
+    animation: modalContentSlide 0.3s ease-in-out;
+}
+
+@keyframes modalContentSlide {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 移动端模态框内容动画 */
+@media (max-width: 768px) {
+    #noteModal.fade-in > div {
+        animation: mobileModalSlideUp 0.3s ease-in-out;
+    }
+    
+    @keyframes mobileModalSlideUp {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* 按钮点击反馈 */
+button:active {
+    transform: scale(0.95);
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
