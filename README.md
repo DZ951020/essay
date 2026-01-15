@@ -38,21 +38,13 @@
 
 ### 方法二：使用本地HTTP服务器（推荐）
 
-#### 使用 Python
+#### 使用 Node.js（推荐）
 ```bash
-# Python 3
-python -m http.server 8000
+# 快速启动（无需安装）
+npx http-server -p 8000
 
-# Python 2
-python -m SimpleHTTPServer 8000
-```
-
-#### 使用 Node.js
-```bash
-# 安装 http-server（如果未安装）
+# 或安装后使用
 npm install -g http-server
-
-# 启动服务器
 http-server -p 8000
 ```
 
@@ -60,6 +52,8 @@ http-server -p 8000
 ```bash
 php -S localhost:8000
 ```
+
+**注意**：当前环境中 Python 命令不可用，建议使用 Node.js 或 PHP 方法启动服务器。
 
 4. 在浏览器中访问：`http://localhost:8000`
 
